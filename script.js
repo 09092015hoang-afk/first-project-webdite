@@ -1,3 +1,77 @@
+const themes = [
+    {
+        background: "#32292F",
+        primary: "#99E1D9"
+    },
+
+    {
+        background: "#020202",
+        primary: "#B2D5E5"
+    },
+
+    {
+        background: "#171717",
+        primary: "#C6FF34"
+    },
+
+    {
+        background: "#36255C",
+        primary: "#D2C3F6"
+    },
+
+    {
+        background: "#1D1D1D",
+        primary: "#E5BDDF"
+    }
+];
+
+let themeIndex = 0;
+
+const colorButton = document.querySelector(".color-btn");
+
+colorButton.addEventListener("click", function() {
+    themeIndex++;
+
+    if (themeIndex >= themes.length) {
+        themeIndex = 0;
+    }
+
+    const theme = themes[themeIndex];
+
+    document.documentElement.style.setProperty(
+        "--primary",
+        theme.primary
+    );
+
+    document.documentElement.style.setProperty(
+        "--secondary",
+        theme.primary
+    );
+    document.documentElement.style.setProperty(
+        "--background-bottom",
+        "#020202"
+    );
+  const overlay = document.querySelector(".theme-overlay");
+
+  overlay.style.background = `linear-gradient(to bottom, ${theme.background}, ${theme.background}, #020202)`;
+
+  overlay.style.opacity = "1";
+
+  setTimeout(() => {
+    document.documentElement.style.setProperty(
+      "--background-top",
+      theme.background
+    );
+
+    document.documentElement.style.setProperty(
+      "--background-middle",
+      theme.background
+    );
+
+    overlay.style.opacity = "0";
+  }, 600);
+});
+
 for (let i = 0; i < 50; i++) {
     const particle = document.createElement("div");
     particle.className = "particle";
