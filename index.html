@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Welcome to my website!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="theme-overlay" aria-hidden="true"></div>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="#home" class="nav-logo">DEVME99</a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="made-by">Made by Devme99</p>
+
+      <h1>
+        Introduction,<br>
+        <span>to my portfolio</span>
+      </h1>
+
+      <p class="description">
+        A young developer exploring Python, C, web design and the endless possibilities of technology
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#about" class="btn primary-btn">About me</a>
+        <a href="#projects" class="btn secondary-btn">My projects</a>
+        <button type="button" class="btn secondary-btn" id="donate-btn">Donate me</button>
+        <button type="button" class="color-btn" aria-label="Change color theme">
+          <span aria-hidden="true">🎨</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About</h2>
+      <p class="description">shhhhhhhhhhhhhh.</p>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <p class="description">shhhhhhhhhhhhhh.</p>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="description">shhhhhhhhhhhhhh.</p>
+    </section>
+  </main>
+
+  <dialog class="donate-modal" id="donate-modal" aria-labelledby="donate-title">
+    <div class="modal-body">
+      <button type="button" class="modal-close" aria-label="Close">&times;</button>
+
+      <h2 id="donate-title">Support me</h2>
+      <p class="modal-text" id="donate-text">Scan the QR code with ZaloPay or your banking app. Thank you!</p>
+
+      <img class="donate-qr" id="donate-qr" src="zalopay-qr.png" alt="ZaloPay QR code for donations" width="220" height="220">
+
+      <p class="donate-name">NGUYEN HUY HOANG</p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
