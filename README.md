@@ -1,2 +1,2 @@
-# first-project-webdite
+# first-project-website
 this is my first website 
